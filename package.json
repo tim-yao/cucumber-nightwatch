@@ -1,6 +1,6 @@
 {
   "name": "cucumber-nightwatch",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "A small library to enable us to use nightwatch.js in cucumber.js",
   "license": "MIT",
   "author": "Tim Yao",
@@ -12,6 +12,9 @@
   },
   "main": "./dist/mjs/NightwatchWorld.js",
   "types": "./dist/types/NightwatchWorld.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "cucumber",
     "nightwatch"
