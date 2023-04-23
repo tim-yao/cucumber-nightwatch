@@ -148,52 +148,8 @@ CN_DEBUG=true
 
 There are some bugs in Nightwatch.js programmatic API. See https://github.com/nightwatchjs/nightwatch/issues/2510 & https://github.com/nightwatchjs/nightwatch/pull/3499
 
-They are causing some issues and I am looking forward to the nightwatch v3 will fix them.
+They are causing issues and I am looking forward to the nightwatch v3 will fix them.
 
-### Nightwatch API command won't throw error if test fail
-
-Below command won't fail cucumber tests when it fails. This issue can be fixed by this patch https://github.com/nightwatchjs-community/cucumber-nightwatch/blob/main/patches/nightwatch%2B2.6.14.patch. And you will need to [patch](https://www.npmjs.com/package/patch-package) the nightwatch.js in your project.
-
-```JavaScript
-    // These won't fail
-    await this.browser.waitForElementVisible(
-      '#not-existing-element',
-      1000,
-      0,
-      true,
-      function (result) {
-        console.log('result', result)
-      }
-    )
-    await this.browser.waitForElementPresent(
-      'css selector',
-      '#not-existing-element'
-    )
-    await this.browser.click('#not-existing-element')
-    await this.browser.ensure.elementIsVisible('#not-existing-element')
-```
-
-Below works.
-
-```JavaScript
-    await this.browser!.expect.element('#not-existing-element').to.be.present;
-    await this.browser!.expect.element('#not-existing-element').to.be.visible;
-    await this.browser!.assert.visible('#not-existing-element')
-```
-
-### `abortOnFailure` option is not working
-
-The below examples will fail the test step even though abortOnFailure is false.
-
-```JavaScript
-await this.browser.waitForElementPresent('.not-existing-element', 100, false)
-await this.browser.waitForElementPresent({
-      selector: '.not-existing-element',
-      retryInterval: 1000,
-      abortOnFailure: false
-    });
-```
-
-### `click` command won't fail
-
-`await browser.click('#not-existing-element')` won't fail the step.
+- https://github.com/tim-yao/cucumber-nightwatch/issues/5
+- https://github.com/tim-yao/cucumber-nightwatch/issues/6
+- https://github.com/tim-yao/cucumber-nightwatch/issues/7
