@@ -36,6 +36,11 @@ module.exports = {
           args: [
             'start-maximized',
             'window-size=1920,1080',
+            // Use no-sandbox here to avoid random "socket hang up" issue.
+            // https://stackoverflow.com/questions/41487659/nightwatch-selenium-socket-hang-up
+            'no-sandbox',
+            // https://stackoverflow.com/questions/53902507/unknown-error-session-deleted-because-of-page-crash-from-unknown-error-cannot
+            '--disable-dev-shm-usage',
           ],
         },
       },

@@ -107,7 +107,7 @@ npx cucumber-js
 Run with [cucumber-js options](https://github.com/cucumber/cucumber-js/blob/main/docs/configuration.md#options)
 
 ```bash
-npx cucumber-js --tags "@regression" --parallel --retry 2 
+npx cucumber-js --tags "@regression" --parallel 4 --retry 2 
 ```
 
 More details can be found in [cucumber-js CLI](https://github.com/cucumber/cucumber-js/blob/main/docs/cli.md)
