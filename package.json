@@ -1,6 +1,6 @@
 {
   "name": "cucumber-nightwatch",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "A small library to enable us to use nightwatch.js in cucumber.js",
   "license": "MIT",
   "author": "Tim Yao",
