@@ -14,11 +14,16 @@ When('I run the cucumber-js with {string}', async function (options) {
       ...process.env,
       NIGHTWATCH_HEADLESS: true,
       NIGHTWATCH_CONFIG: 'test/fixtures/nightwatch.conf.js',
-    }
+      NIGHTWATCH_OUTPUT: true,
+      NIGHTWATCH_SILENT: false
+    },
+    timeout: 30000, // kill the process after 30 seconds
   }
   try {
-    // subProcess.execSync(this.command + options, {stdio: 'pipe'})
-    subProcess.execSync(this.command + options, execOptions)
+    const ls = subProcess.execSync(this.command + options, execOptions)
+    consola.start('===================== Sub Process Start =====================')
+    consola.info(ls.toString())
+    consola.success('===================== Sub Process End =====================')
   } catch (err) {
     this.testError = err.stdout.toString()
   }
