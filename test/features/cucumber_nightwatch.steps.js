@@ -17,10 +17,9 @@ When('I run the cucumber-js with {string}', async function (options) {
       NIGHTWATCH_OUTPUT: true,
       NIGHTWATCH_SILENT: false
     },
-    timeout: 20000,
+    timeout: 30000, // kill the process after 30 seconds
   }
   try {
-    // subProcess.execSync(this.command + options, {stdio: 'pipe'})
     const ls = subProcess.execSync(this.command + options, execOptions)
     consola.start('===================== Sub Process Start =====================')
     consola.info(ls.toString())
