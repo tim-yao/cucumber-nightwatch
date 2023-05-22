@@ -41,7 +41,7 @@
   },
   "peerDependencies": {
     "@cucumber/cucumber": ">8.0.0",
-    "nightwatch": ">2.6.19"
+    "nightwatch": "3.0.0-preview.1"
   },
   "devDependencies": {
     "@cucumber/pretty-formatter": "^1.0.0",
