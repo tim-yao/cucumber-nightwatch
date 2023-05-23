@@ -36,7 +36,7 @@ const nightwatchClient = function () {
     // All other Nightwatch config settings can be overwritten here, such as:
     // disable_colors: true,
     always_async_commands: true,
-    config: process.env.NIGHTWATCH_CONFIG || null,
+    config: process.env.NIGHTWATCH_CONFIG,
   })
 }
 
