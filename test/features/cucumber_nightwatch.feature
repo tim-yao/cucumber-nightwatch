@@ -9,3 +9,8 @@ Scenario: Can run Cucumber Nightwatch test to capture failure
   Given a Cucumber setup with cucumber-nightwatch
   When I run the cucumber-js with "--tags @fail"
   Then it fails
+
+Scenario: Can run Cucumber Nightwatch tests in parallel
+  Given a Cucumber setup with cucumber-nightwatch
+  When I run the cucumber-js with "--tags @pass --parallel 2"
+  Then it passes
