@@ -7,6 +7,11 @@ This is a demo test for testing the cucumber-nightwatch
     When I check the page title
     Then the title text should be "Google"
 
+  @pass
+  Scenario: Use nightwatch.js browser testing API in the Cucumber test
+    Given I visit the Google AU homepage
+    Then I should see the search form
+
   @fail
   Scenario: Use nightwatch.js browser testing API in the Cucumber test
     Given I visit the Google AU homepage

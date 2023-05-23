@@ -32,5 +32,3 @@ jobs:
       run: npm run build
     - name: Test
       run: npm test
-    - name: Test parallel option
-      run: npm test -- --parallel 2

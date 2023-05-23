@@ -3,7 +3,7 @@ const subProcess = require('child_process')
 const assert = require('assert')
 const consola = require('consola')
 
-Given('a Cucumber setup', function () {
+Given('a Cucumber setup with cucumber-nightwatch', function () {
   // this.command = 'npm run test-js -- '
   this.command = 'node_modules/.bin/cucumber-js test/fixtures --require test/fixtures/**/*.js --format @cucumber/pretty-formatter --publish-quiet '
 })
@@ -12,10 +12,11 @@ When('I run the cucumber-js with {string}', async function (options) {
   const execOptions = {
     env: {
       ...process.env,
+      NIGHTWATCH_BROWSER: 'chrome',
       NIGHTWATCH_HEADLESS: true,
       NIGHTWATCH_CONFIG: 'test/fixtures/nightwatch.conf.js',
       NIGHTWATCH_OUTPUT: true,
-      NIGHTWATCH_SILENT: false
+      NIGHTWATCH_SILENT: true
     },
     timeout: 30000, // kill the process after 30 seconds
   }
