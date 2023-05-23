@@ -12,7 +12,7 @@ When('I run the cucumber-js with {string}', async function (options) {
   const execOptions = {
     env: {
       ...process.env,
-      NIGHTWATCH_BROWSER: chrome,
+      NIGHTWATCH_BROWSER: 'chrome',
       NIGHTWATCH_HEADLESS: true,
       NIGHTWATCH_CONFIG: 'test/fixtures/nightwatch.conf.js',
       NIGHTWATCH_OUTPUT: true,
