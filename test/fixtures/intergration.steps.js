@@ -20,12 +20,11 @@ Then('run below commands should pass', async function (dataTable) {
   const nightwatchCommands = dataTable.hashes()
   for (let i=0; i < nightwatchCommands.length; i++) {
     const nightwatchCommand = nightwatchCommands[i]
-    console.log('nightwatchCommand', nightwatchCommand)
     await this.browser[nightwatchCommand.command](nightwatchCommand.arg)
   }
 })
 
 Then('element commands should work', async function () {
-  const auLink = await this.browser.element.findAllByText('Australia')
-  this.browser.expect.element(auLink).text.to.equal('Australia')
+  const gmail = await this.browser.element.findAllByText('Gmail')
+  this.browser.expect.element(gmail).text.to.equal('Gmail')
 })
