@@ -146,10 +146,4 @@ CN_DEBUG=true
 
 ## Known issues 🐛
 
-There are some bugs in Nightwatch.js programmatic API. See https://github.com/nightwatchjs/nightwatch/issues/2510 & https://github.com/nightwatchjs/nightwatch/pull/3499
-
-They are causing issues and I am looking forward to the nightwatch v3 will fix them.
-
-- https://github.com/tim-yao/cucumber-nightwatch/issues/5
-- https://github.com/tim-yao/cucumber-nightwatch/issues/6
-- https://github.com/tim-yao/cucumber-nightwatch/issues/7
+There are some bugs in Nightwatch.js programmatic API. See https://github.com/tim-yao/cucumber-nightwatch/issues/6
