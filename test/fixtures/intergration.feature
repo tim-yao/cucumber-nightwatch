@@ -11,7 +11,7 @@ Use nightwatch.js browser testing API in the Cucumber test.
   @pass
   Scenario: The nightwatch command and expect should work 2
     Given I visit the Google AU homepage
-    Then I run
+    Then run below commands should pass
     | command | arg |
     | waitForElementPresent | input |
     | waitForElementVisible | form[role="search"] |
@@ -28,13 +28,13 @@ Use nightwatch.js browser testing API in the Cucumber test.
   @fail
   Scenario: The nightwatch waitForElementVisible should capture the failure
     Given I visit the Google AU homepage
-    Then I run
+    Then run below commands should pass
     | command | arg |
     | waitForElementVisible | #not-existing-element |
 
  @fail
   Scenario: The nightwatch element API should capture the failure
     Given I visit the Google AU homepage
-    Then I run
+    Then run below commands should pass
     | command | arg |
     | element | #not-existing-element |
