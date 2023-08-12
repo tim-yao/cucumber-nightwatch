@@ -41,5 +41,6 @@ jobs:
       with:
         report_paths: '**/reports/report.xml'
         detailed_summary: true
+        include_passed: true
         check_name: 'Test Report'
-        summary: 'No idea what this is for'
+        summary: 'Summary of Test Report'
