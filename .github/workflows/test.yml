@@ -32,10 +32,8 @@ jobs:
       run: npm run build
     - name: Test
       run: npm test
-    - name: Adding summary
-      run: |
-        echo "This is the lead in sentence for the list" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
-        echo "- Lets add a bullet point" >> $GITHUB_STEP_SUMMARY
-        echo "- Lets add a second bullet point" >> $GITHUB_STEP_SUMMARY
-        echo "- How about a third one?" >> $GITHUB_STEP_SUMMARY
+    - name: Publish Test Report
+      uses: mikepenz/action-junit-report@v3
+      if: success() || failure() # always run even if the previous step fails
+      with:
+        report_paths: '**/reports/report.xml'
