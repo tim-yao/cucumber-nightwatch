@@ -1,7 +1,7 @@
 # cucumber-nightwatch 🥒 + 🦉
 [![Test](https://github.com/tim-yao/cucumber-nightwatch/actions/workflows/test.yml/badge.svg)](https://github.com/tim-yao/cucumber-nightwatch/actions/workflows/test.yml) [![npm version](https://badge.fury.io/js/cucumber-nightwatch.svg)](https://badge.fury.io/js/cucumber-nightwatch)
 
-> A small library to enable us to use nightwatch.js in cucumber.js
+> A small library to enable us to use latest nightwatch.js(v3) in cucumber.js(v9)
 
 ![screenshot](cucumber-nightwatch.png)
 
