@@ -4,6 +4,7 @@
   "description": "A small library to enable us to use nightwatch.js in cucumber.js",
   "license": "MIT",
   "author": "Tim Yao",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/mjs/NightwatchWorld.js",
@@ -32,7 +33,7 @@
   "homepage": "https://github.com/tim-yao/cucumber-nightwatch#readme",
   "scripts": {
     "build": "tsc --project tsconfig.cjs.json --declaration & tsc --project tsconfig.json",
-    "test": "cucumber-js test/features --config test/config/cucumber.js --require test/features/**/*.js --publish",
+    "test": "cucumber-js test/features --config test/config/cucumber.cjs --require test/features/**/*.cjs --publish",
     "lint": "eslint src/** && prettier --check .",
     "typecheck": "tsc --noEmit"
   },
@@ -45,7 +46,7 @@
   },
   "devDependencies": {
     "@cucumber/pretty-formatter": "^1.0.0",
-    "@tsconfig/node18": "^2.0.0",
+    "@tsconfig/node18": "^18.2.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "chromedriver": "^115.0.0",

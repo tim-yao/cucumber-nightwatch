@@ -5,7 +5,7 @@ const consola = require('consola')
 
 Given('a Cucumber setup with cucumber-nightwatch', function () {
   // this.command = 'npm run test-js -- '
-  this.command = 'node_modules/.bin/cucumber-js test/fixtures --require test/fixtures/**/*.js --format @cucumber/pretty-formatter --publish-quiet '
+  this.command = 'node_modules/.bin/cucumber-js test/fixtures --require test/fixtures/**/*.cjs --format @cucumber/pretty-formatter --publish-quiet '
 })
 
 When('I run the cucumber-js with {string}', async function (options) {
@@ -14,7 +14,7 @@ When('I run the cucumber-js with {string}', async function (options) {
       ...process.env,
       NIGHTWATCH_BROWSER: 'chrome',
       NIGHTWATCH_HEADLESS: true,
-      NIGHTWATCH_CONFIG: 'test/fixtures/nightwatch.conf.js',
+      NIGHTWATCH_CONFIG: 'test/fixtures/nightwatch.conf.cjs',
       NIGHTWATCH_OUTPUT: true,
       NIGHTWATCH_SILENT: true
     },
