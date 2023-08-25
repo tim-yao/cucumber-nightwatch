@@ -4,7 +4,6 @@
   "include": ["src/**/*"],
   "compilerOptions": {
     "module": "CommonJS",
-    "moduleResolution": "nodenext",
     "outDir": "dist/cjs",
     "declarationDir": "dist/types"
   }
