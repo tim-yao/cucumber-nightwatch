@@ -3,7 +3,8 @@
   "exclude": ["node_modules"],
   "include": ["src/**/*"],
   "compilerOptions": {
-    "module": "Node16",
+    "module": "CommonJS",
+    "moduleResolution": "nodenext",
     "outDir": "dist/cjs",
     "declarationDir": "dist/types"
   }
