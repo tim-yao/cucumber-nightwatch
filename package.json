@@ -1,14 +1,14 @@
 {
   "name": "cucumber-nightwatch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small library to enable us to use nightwatch.js in cucumber.js",
   "license": "MIT",
   "author": "Tim Yao",
-  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/mjs/NightwatchWorld.js",
-      "require": "./dist/cjs/NightwatchWorld.js"
+      "require": "./dist/cjs/NightwatchWorld.js",
+      "types": "./dist/types/NightwatchWorld.d.ts"
     }
   },
   "main": "./dist/mjs/NightwatchWorld.js",
@@ -41,7 +41,7 @@
     "consola": "^3.1.0"
   },
   "peerDependencies": {
-    "@cucumber/cucumber": "^9.0.0",
+    "@cucumber/cucumber": ">=9.0.0",
     "nightwatch": "^3.1.0"
   },
   "devDependencies": {
