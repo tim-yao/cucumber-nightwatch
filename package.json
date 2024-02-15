@@ -48,8 +48,8 @@
   "devDependencies": {
     "@cucumber/pretty-formatter": "^1.0.0",
     "@tsconfig/node18": "^18.2.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^9.0.0",
     "prettier": "^3.0.0",
